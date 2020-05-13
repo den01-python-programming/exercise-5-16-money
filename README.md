@@ -6,20 +6,21 @@ In the Payment card exercise we used an object variable to store the amount of m
 class Money:
 
     def __init__(self, pounds, pence):
-        this.pounds = pounds
+        self.pounds = pounds
+        self.pence = pence
 
-    def pounds():
-        return pounds
+    def pounds(self):
+        return self.pounds
 
-    def pence():
-        return pence
+    def pence(self):
+        return self.pence
 
-    def __str__():
+    def __str__(self):
         zero = ""
-        if (pence <= 10):
+        if (self.pence <= 10):
             zero = "0"
 
-        return pounds + "." + zero + pence + "p"
+        return str(self.pounds) + "." + zero + str(self.pence) + "p"
 ```
 
 Next we'll create a few operations for processing money.
@@ -32,10 +33,10 @@ The basis for the method is the following:
 
 ```python
 def plus(self, addition):
-    newMoney = Money(...) # create a Money object that has the correct worth
+    new_money = Money(...) # create a money object that has the correct worth
 
-    # return the Money object
-    return newMoney
+    # return the money object
+    return new_money
 ```
 
 Here are some examples of how the method works.
@@ -60,7 +61,7 @@ print(c)  # 15.00p
 
 ## Less
 
-Create the method `def less_than(self, compared)` that returns true if the money-object on which the method is called on has a lesser value than the money object given as a parameter.
+Create the method `def less_than(self, other)` that returns true if the money-object on which the method is called on has a lesser value than the money object given as a parameter.
 
 
 ```python
